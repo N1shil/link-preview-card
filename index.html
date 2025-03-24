@@ -1,40 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="Description" content="Demonstration for link-preview-card" />
 
-<head>
-  <base href="/">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="Description" content="Demonstration for link-preview-card">
-  <title>link-preview-card</title>
+    <style>
+      :root,
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
 
-  <style>
-    :root, html, body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-    #demo {
-      margin: var(--ddd-spacing-2);
-    }
-    link-preview-card {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
-    }
-    link-preview-card:hover {
-      box-shadow: var(--ddd-boxShadow-sm);
-    }
-  </style>
-</head>
+      #demo {
+        margin: var(--ddd-spacing-2);
+        padding: 1rem;
+        text-align: center;
+      }
 
-<body>
-  <div id="demo">
-    <h1>link-preview-card</h1>
-    <h2>Default</h2>
-    <link-preview-card href="https://psu.edu/"></link-preview-card>
-  </div>
-  
-  <script type="module" src="./link-preview-card.js"></script>
-</body>
+      link-preview-card {
+        margin: var(--ddd-spacing-2, 16px);
+        border: var(--ddd-border-md, 1px solid #ccc);
+        border-radius: var(--ddd-radius-lg, 8px);
+        display: block;
+        background-color: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      link-preview-card:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+        color: var(--ddd-primary-2, #333);
+      }
+    </style>
+    <title>link-preview-card</title>
+  </head>
+
+  <body>
+    <div id="demo">
+      <h1>Link Preview Card</h1>
+
+      <link-preview-card></link-preview-card>
+      <link-preview-card
+        web-link="https://www.spotify.com"
+        description="Spotify is a digital music streaming platform where users can listen to millions of songs and podcasts.">
+      </link-preview-card>
+      <link-preview-card
+        web-link="https://www.weather.com"
+        description="The Weather Channel provides weather updates, forecasts, and radar maps for any location in the world.">
+      </link-preview-card>
+      <link-preview-card
+        web-link="https://www.nationalgeographic.com"
+        description="National Geographic offers educational content about science, nature, history, and exploration with powerful storytelling and imagery.">
+      </link-preview-card>
+      <link-preview-card
+        web-link="https://www.linkedin.com"
+        description="LinkedIn is a professional networking platform where people connect with others in their industry and search for jobs.">
+      </link-preview-card>
+    </div>
+
+    <script type="module" src="./link-preview-card.js"></script>
+  </body>
 </html>
+
